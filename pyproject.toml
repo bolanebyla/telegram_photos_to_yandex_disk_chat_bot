@@ -11,6 +11,7 @@ packages = [{include = "tg_photos_to_yadisk_chat_bot"}]
 python = "^3.11"
 yadisk = "^2.1.0"
 pytelegrambotapi = "^4.15.1"
+pydantic = "^2.5.3"
 
 [tool.poetry.group.dev.dependencies]
 isort = "^5.13.2"
