@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "tg-photos-to-yadisk-chat-bot"
+version = "0.1.0"
+description = "Chat bot for saving photos from the chat to yandex.disk"
+authors = ["Алексей Лесков <alexleskov2000@gmail.com>"]
+license = "MIT license"
+readme = "README.md"
+packages = [{include = "tg_photos_to_yadisk_chat_bot"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+yadisk = "^2.1.0"
+pytelegrambotapi = "^4.15.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
