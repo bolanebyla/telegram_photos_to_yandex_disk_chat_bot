@@ -1,7 +1,7 @@
 import asyncio
 
 from tg_photos_to_yadisk_chat_bot.adapters.tg_bot import (
-    AllTextMessagesHandler,
+    PhotosAndVideosMessagesHandler,
     TgBotSettings,
     create_bot,
 )
@@ -16,12 +16,12 @@ class Application:
 
 
 class TgBotHandlers:
-    all_text_messages_handler = AllTextMessagesHandler()
+    all_text_messages_handler = PhotosAndVideosMessagesHandler()
 
 
 tg_bot = create_bot(
     tg_bot_token=Settings.tg_bot.TG_BOT_TOKEN,
-    all_text_messages_handler=TgBotHandlers.all_text_messages_handler,
+    photos_and_videos_messages_handler=TgBotHandlers.all_text_messages_handler,
 )
 
 if __name__ == '__main__':

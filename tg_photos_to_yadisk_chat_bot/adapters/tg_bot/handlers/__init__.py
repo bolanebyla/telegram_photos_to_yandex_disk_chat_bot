@@ -1,1 +1,1 @@
-from .all_text_messages_handler import AllTextMessagesHandler
+from .photos_and_videos_messages_handler import PhotosAndVideosMessagesHandler
