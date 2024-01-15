@@ -13,6 +13,7 @@ yadisk = "^2.1.0"
 pytelegrambotapi = "^4.15.1"
 pydantic = "^2.5.3"
 attrs = "^23.2.0"
+aiohttp = "^3.9.1"
 
 [tool.poetry.group.dev.dependencies]
 isort = "^5.13.2"
