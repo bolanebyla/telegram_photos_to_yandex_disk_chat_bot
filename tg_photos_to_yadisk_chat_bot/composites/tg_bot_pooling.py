@@ -5,18 +5,32 @@ from tg_photos_to_yadisk_chat_bot.adapters.tg_bot import (
     TgBotSettings,
     create_bot,
 )
+from tg_photos_to_yadisk_chat_bot.adapters.yadisk_file_storage import (
+    YaDiskFileStorage,
+)
+from tg_photos_to_yadisk_chat_bot.application.media_handler.services import (
+    SavingMediaService,
+)
 
 
 class Settings:
     tg_bot = TgBotSettings()
 
 
+class Storages:
+    ya_disk_file_storage = YaDiskFileStorage()
+
+
 class Application:
-    pass
+    saving_media_service = SavingMediaService(
+        file_storage=Storages.ya_disk_file_storage,
+    )
 
 
 class TgBotHandlers:
-    all_text_messages_handler = PhotosAndVideosMessagesHandler()
+    all_text_messages_handler = PhotosAndVideosMessagesHandler(
+        saving_media_service=Application.saving_media_service,
+    )
 
 
 tg_bot = create_bot(
